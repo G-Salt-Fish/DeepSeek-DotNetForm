@@ -36,7 +36,13 @@
             this.ToolStripMenuItem_Setting__APIKey = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Setting__SystemPrompt = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Setting__About = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox_Talking = new System.Windows.Forms.TextBox();
+            this.textBox_Talking = new System.Windows.Forms.RichTextBox();
+            this.ToolStripMenuItem_Setting__Salutation = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Setting__Salutation_DeepSeek = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Setting__Salutation_User = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Setting__Color = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Setting__Color_DeepSeek = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Setting__Color_User = new System.Windows.Forms.ToolStripMenuItem();
             this.Form1_menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +95,8 @@
             this.ToolStripMenuItem_Setting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Setting__APIKey,
             this.ToolStripMenuItem_Setting__SystemPrompt,
+            this.ToolStripMenuItem_Setting__Salutation,
+            this.ToolStripMenuItem_Setting__Color,
             this.ToolStripMenuItem_Setting__About});
             this.ToolStripMenuItem_Setting.Name = "ToolStripMenuItem_Setting";
             this.ToolStripMenuItem_Setting.Size = new System.Drawing.Size(44, 21);
@@ -97,36 +105,79 @@
             // ToolStripMenuItem_Setting__APIKey
             // 
             this.ToolStripMenuItem_Setting__APIKey.Name = "ToolStripMenuItem_Setting__APIKey";
-            this.ToolStripMenuItem_Setting__APIKey.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItem_Setting__APIKey.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem_Setting__APIKey.Text = "API Key";
             this.ToolStripMenuItem_Setting__APIKey.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__APIKey_Click);
             // 
             // ToolStripMenuItem_Setting__SystemPrompt
             // 
             this.ToolStripMenuItem_Setting__SystemPrompt.Name = "ToolStripMenuItem_Setting__SystemPrompt";
-            this.ToolStripMenuItem_Setting__SystemPrompt.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItem_Setting__SystemPrompt.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem_Setting__SystemPrompt.Text = "系统提示词";
             this.ToolStripMenuItem_Setting__SystemPrompt.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__SystemPrompt_Click);
             // 
             // ToolStripMenuItem_Setting__About
             // 
             this.ToolStripMenuItem_Setting__About.Name = "ToolStripMenuItem_Setting__About";
-            this.ToolStripMenuItem_Setting__About.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItem_Setting__About.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem_Setting__About.Text = "关于";
             this.ToolStripMenuItem_Setting__About.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__About_Click);
             // 
             // textBox_Talking
             // 
-            this.textBox_Talking.AcceptsReturn = true;
-            this.textBox_Talking.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_Talking.Location = new System.Drawing.Point(15, 75);
-            this.textBox_Talking.Multiline = true;
+            this.textBox_Talking.Location = new System.Drawing.Point(12, 28);
             this.textBox_Talking.Name = "textBox_Talking";
             this.textBox_Talking.ReadOnly = true;
-            this.textBox_Talking.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_Talking.Size = new System.Drawing.Size(757, 378);
+            this.textBox_Talking.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
+            this.textBox_Talking.Size = new System.Drawing.Size(760, 425);
             this.textBox_Talking.TabIndex = 7;
-            this.textBox_Talking.TabStop = false;
+            this.textBox_Talking.Text = "";
+            // 
+            // ToolStripMenuItem_Setting__Salutation
+            // 
+            this.ToolStripMenuItem_Setting__Salutation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Setting__Salutation_DeepSeek,
+            this.ToolStripMenuItem_Setting__Salutation_User});
+            this.ToolStripMenuItem_Setting__Salutation.Name = "ToolStripMenuItem_Setting__Salutation";
+            this.ToolStripMenuItem_Setting__Salutation.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_Setting__Salutation.Text = "称呼";
+            // 
+            // ToolStripMenuItem_Setting__Salutation_DeepSeek
+            // 
+            this.ToolStripMenuItem_Setting__Salutation_DeepSeek.Name = "ToolStripMenuItem_Setting__Salutation_DeepSeek";
+            this.ToolStripMenuItem_Setting__Salutation_DeepSeek.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_Setting__Salutation_DeepSeek.Text = "DeepSeek";
+            this.ToolStripMenuItem_Setting__Salutation_DeepSeek.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__Salutation_DeepSeek_Click);
+            // 
+            // ToolStripMenuItem_Setting__Salutation_User
+            // 
+            this.ToolStripMenuItem_Setting__Salutation_User.Name = "ToolStripMenuItem_Setting__Salutation_User";
+            this.ToolStripMenuItem_Setting__Salutation_User.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_Setting__Salutation_User.Text = "User";
+            this.ToolStripMenuItem_Setting__Salutation_User.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__Salutation_User_Click);
+            // 
+            // ToolStripMenuItem_Setting__Color
+            // 
+            this.ToolStripMenuItem_Setting__Color.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Setting__Color_DeepSeek,
+            this.ToolStripMenuItem_Setting__Color_User});
+            this.ToolStripMenuItem_Setting__Color.Name = "ToolStripMenuItem_Setting__Color";
+            this.ToolStripMenuItem_Setting__Color.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_Setting__Color.Text = "颜色";
+            // 
+            // ToolStripMenuItem_Setting__Color_DeepSeek
+            // 
+            this.ToolStripMenuItem_Setting__Color_DeepSeek.Name = "ToolStripMenuItem_Setting__Color_DeepSeek";
+            this.ToolStripMenuItem_Setting__Color_DeepSeek.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_Setting__Color_DeepSeek.Text = "DeepSeek";
+            this.ToolStripMenuItem_Setting__Color_DeepSeek.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__Color_DeepSeek_Click);
+            // 
+            // ToolStripMenuItem_Setting__Color_User
+            // 
+            this.ToolStripMenuItem_Setting__Color_User.Name = "ToolStripMenuItem_Setting__Color_User";
+            this.ToolStripMenuItem_Setting__Color_User.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_Setting__Color_User.Text = "User";
+            this.ToolStripMenuItem_Setting__Color_User.Click += new System.EventHandler(this.ToolStripMenuItem_Setting__Color_User_Click);
             // 
             // Form1
             // 
@@ -158,9 +209,15 @@
 		private System.Windows.Forms.MenuStrip Form1_menuStrip;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__About;
-        private System.Windows.Forms.TextBox textBox_Talking;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__APIKey;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__SystemPrompt;
+        private System.Windows.Forms.RichTextBox textBox_Talking;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__Salutation;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__Salutation_DeepSeek;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__Salutation_User;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__Color;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__Color_DeepSeek;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Setting__Color_User;
     }
 }
 
